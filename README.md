@@ -1,7 +1,7 @@
 # shore-mcp
 
 MCP (Model Context Protocol) server that exposes the
-[Silvershore](https://github.com/mythofmeat/silvershore) chat daemon's CLI
+[Shore](https://github.com/mythofmeat/shore-core) chat daemon's CLI
 surface for debugging and programmatic use. Talks to `shore-daemon` over the
 Shore Wire Protocol (SWP) using the published
 [`shore-swp-client`](https://crates.io/crates/shore-swp-client) and
