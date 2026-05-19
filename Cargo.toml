@@ -1,0 +1,30 @@
+[package]
+name = "shore-mcp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mythofmeat/shore-mcp"
+description = "MCP server exposing the Silvershore daemon's CLI surface for debugging and programmatic use."
+
+[[bin]]
+name = "shore-mcp"
+
+[dependencies]
+shore-swp-client = "0.1"
+shore-config = "0.1"
+shore-protocol = "0.1"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+clap = { version = "4", features = ["derive"] }
+dirs = "6"
+tempfile = "3"
+which = "6"
+rmcp = { version = "1.4", features = ["server", "transport-io"] }
+schemars = "1"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
